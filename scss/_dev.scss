@@ -1,0 +1,37 @@
+/*
+
+20/04/2015 | J. Henrotte
+_dev.scss
+Dev mode for the open know project
+SHOULD REMOVE FOR PRODUCTION
+
+*/
+
+
+// body:after {
+//     content: 'base';
+//     position: fixed;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     text-align: center;
+//     background: red;
+//     color: #fff;
+//     font-size: 1rem;
+//     @media screen and (min-width: $screen-small) {
+//         content: 'small: #{$screen-small}';
+//     }
+//     @media screen and (min-width: $screen-med) {
+//         content: 'med: #{$screen-med}';
+//     }
+//     @media screen and (min-width: $screen-large) {
+//         content: 'large: #{$screen-large}';
+//     }
+//     @media screen and (min-width: $screen-xlarge) {
+//         content: 'xlarge: #{$screen-xlarge}';
+//     }
+// }
+
+// body{
+//     padding-bottom: 5rem;
+// }

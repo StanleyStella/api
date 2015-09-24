@@ -1,0 +1,92 @@
+/*
+
+20/04/2015 | J. Henrotte
+_base.scss
+Basic reset for the Sagaframework
+
+*/
+
+/* Border box code to manage sizes */
+
+*, :after, :before {
+    -moz-box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+    word-wrap:break-word;
+}
+
+hr{
+  border:0;
+  border-top:1px solid $border-color;
+  margin: 10px 0;
+}
+
+strong{
+  color: $base-color;
+  font-weight: 600;
+}
+
+/* Selection color */
+
+::-moz-selection { /* Code for Firefox */
+    color: $green-color;
+    background: $base-color;
+}
+
+::selection {
+    color: $black-color; 
+    background: $green-color;
+}
+
+a{
+  text-decoration: none;
+  color: $base-color;
+}
+
+.wrapper{
+  padding: 30px 10px;
+  width: 100%;
+  max-width: $screen-max-size;
+  margin: 0 auto;
+}
+
+.base--title{
+  color: $base-color;
+  @include font-size(48px);
+  border-bottom: 1px solid $base-color;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.base--search{
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  @include font-size(20px);
+  padding: 10px 0px;
+  padding-left: 40px;
+  background: url(../img/search.svg) left center no-repeat;
+  outline: 0;
+  color: $title-color;
+  font-family: "Avenir", sans-serif;
+}
+
+::-webkit-input-placeholder {
+   font-style: italic;
+}
+:-moz-placeholder {
+   font-style: italic;
+}
+::-moz-placeholder {
+   font-style: italic;
+}
+:-ms-input-placeholder {  
+   font-style: italic;
+}
+
+button{
+  cursor: pointer;
+  outline: 0;
+}

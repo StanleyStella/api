@@ -1,0 +1,74 @@
+[class*='button--']{
+	@extend %btntag;
+	color: $green-color;
+	font-size: 14px;
+	margin: .5rem 0;
+	cursor: pointer;
+	font-family: 'Avenir', sans-serif;
+	font-weight: 500;
+	border-radius:0;
+	&:hover,&.selected{
+		background-color: lighten($green-color, 5%);
+	}
+	&.full{
+		width: 100%;
+		margin-top: 0;
+	}
+}
+
+//Colors we want
+$color-collection: 
+($base-color,$green-color, $orange-color, $blue-color, $red-color, $black-color, white, $mint-color);
+
+//Type button we want (Collection must be equal to colors collection)
+$type-collection : 
+(base)
+(green) 
+(orange) 
+(blue)
+(red) 
+(black)
+(white)
+(mint);
+
+@each $colors in $color-collection {
+	$theColor : $colors;
+	//Index for the color collection
+	$u : index($color-collection, $colors);
+	//Get the good type-collection index
+	$collect : nth($type-collection, $u);
+
+	//Use collection to add class with ','
+	$selector: ();
+	//Create class and add after
+	@for $i from 1 through length($collect){
+		$selector: append($selector, unquote('.button--#{nth($collect, $i)}'), comma);
+	}
+	$this-color: $theColor;
+	#{$selector} {
+		border-color: darken($this-color, 10%);
+		color: $this-color;
+		&:hover,&.selected,&.disable, &.solid{
+			background-color: $this-color;
+			color: white;
+		}
+		&.disable,&[disabled=disabled], &:disabled{
+			font-size: 0;
+			@include opacity(.5);
+			cursor: default;
+			&:before{
+				font-size: 1.3rem;
+				content: 'Loading...';
+			}
+		}
+	}
+}
+
+.button--none{
+	border: 0;
+	color: $text-color;
+	&:hover{
+		color: $title-color;
+		background-color: transparent;
+	}
+}

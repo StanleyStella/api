@@ -1,0 +1,29 @@
+.header{
+	border-bottom: 1px solid #e1e1e1;
+	overflow: hidden;
+	height: 50px;
+	padding: 0 10px;
+	&--title{
+		&--logo{
+			float: left;
+			margin-right: 2rem;
+			margin-top: 8px;
+		}
+		&--text{
+			display: inline-block;
+			position: relative;
+			font-size: 1rem;
+			line-height: 46px;
+			&:before{
+				content: "";
+				height: 20px;
+				width: 1px;
+				background-color: #ccc;
+				position: absolute;
+				left: -1rem;
+				top: 15px;
+				display: inline-block;
+			}
+		}
+	}
+}

@@ -1,0 +1,716 @@
+/*
+
+24/08/2015 | J. Henrotte
+application.scss
+Importation of all scss files
+	-> Output css/application.css
+
+*/
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,400italic,300italic,600,600italic);
+/* line 5, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+/*
+
+20/04/2015 | J. Henrotte
+_vars.scss
+Variables for the the Sagaframework
+
+*/
+/*
+
+17/02/2015 | J. Henrotte
+_placeholder.scss
+Placeholders for the Sagaframework
+
+*/
+/* line 29, ../scss/base/_placeholder.scss */
+[class*='button--'] {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s; }
+
+/* line 34, ../scss/base/_placeholder.scss */
+[class*='button--'] {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color: transparent;
+  border: 1px solid #4A4A4A;
+  color: #4A4A4A;
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 100;
+  outline: 0;
+  padding: .4rem 1.2rem;
+  text-align: center;
+  text-decoration: none; }
+  /* line 47, ../scss/base/_placeholder.scss */
+  [class*='button--']:hover {
+    background-color: #4A4A4A;
+    color: white; }
+
+/*
+
+20/04/2015 | J. Henrotte
+_mixins.scss
+Mixins for the Sagaframework
+
+*/
+/* Breakpoin mixins
+
+	Usage : 
+	@include screen-large{
+		property : value;
+	}
+
+*/
+/*
+
+	Font-size REM + Callback PX
+	Usage :
+	 @include font-size(value);
+
+*/
+/*
+
+	Border radius mixins (4 corners)
+	Usage :
+	@include border-radius(value)
+
+*/
+/*
+
+	Opacity mixins (I8- Compatible)
+	Usage :
+	@include opacity(value);
+
+*/
+/*
+
+	Center block
+	Usage : 
+	@include center-block;
+
+*/
+/*
+
+	Text-truncate
+	Usage : 
+	@include texte-truncate
+
+*/
+/*
+
+	Translate mixin
+	@include translate(x, y)
+
+*/
+/*
+
+20/04/2015 | J. Henrotte
+_fonts.scss
+Fonts for the projet Sagaframework
+
+*/
+@font-face {
+  font-family: "openwatch";
+  src: url("../fonts/openwatch.eot");
+  src: url("../fonts/openwatch.eot?#iefix") format("embedded-opentype"), url("../fonts/openwatch.woff") format("woff"), url("../fonts/openwatch.ttf") format("truetype"), url("../fonts/openwatch.svg#openwatch") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* line 15, ../scss/base/_fontIcons.scss */
+[data-icon]:before {
+  font-family: "openwatch" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* line 28, ../scss/base/_fontIcons.scss */
+[class^="ow-"]:before,
+[class*=" ow-"]:before {
+  font-family: "openwatch" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* line 41, ../scss/base/_fontIcons.scss */
+.ow-map-location:before {
+  content: "a"; }
+
+/* line 44, ../scss/base/_fontIcons.scss */
+.ow-network-2:before {
+  content: "b"; }
+
+/* line 47, ../scss/base/_fontIcons.scss */
+.ow-list-1:before {
+  content: "c"; }
+
+/* line 50, ../scss/base/_fontIcons.scss */
+.ow-antenna-1:before {
+  content: "d"; }
+
+/* line 53, ../scss/base/_fontIcons.scss */
+.ow-clock-3:before {
+  content: "e"; }
+
+/* line 56, ../scss/base/_fontIcons.scss */
+.ow-cross-1:before {
+  content: "f"; }
+
+/*
+
+17/02/2015 | J. Henrotte
+_typography.scss
+Typography for the Sagaframework
+
+*/
+/* line 9, ../scss/base/_typography.scss */
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 62.5%;
+  font-weight: 400;
+  line-height: 1.5;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); }
+
+/* line 19, ../scss/base/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Source Sans Pro", sans-serif;
+  color: rgba(51, 61, 70, 0.9);
+  line-height: 1.2; }
+
+/* line 25, ../scss/base/_typography.scss */
+p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  color: #7F7E92; }
+
+/* line 31, ../scss/base/_typography.scss */
+em {
+  color: #10D88A; }
+
+/* line 73, ../scss/base/_typography.scss */
+.color--green {
+  color: #10D88A !important; }
+  /* line 75, ../scss/base/_typography.scss */
+  .color--green a {
+    text-decoration: none;
+    font-style: italic; }
+
+/* line 73, ../scss/base/_typography.scss */
+.color--red {
+  color: #F16071 !important; }
+  /* line 75, ../scss/base/_typography.scss */
+  .color--red a {
+    text-decoration: none;
+    font-style: italic; }
+
+/*
+
+20/04/2015 | J. Henrotte
+_base.scss
+Basic reset for the Sagaframework
+
+*/
+/* Border box code to manage sizes */
+/* line 11, ../scss/base/_base.scss */
+*, :after, :before {
+  -moz-box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  word-wrap: break-word; }
+
+/* line 18, ../scss/base/_base.scss */
+hr {
+  border: 0;
+  border-top: 1px solid #EDEDED;
+  margin: 10px 0; }
+
+/* line 24, ../scss/base/_base.scss */
+strong {
+  color: #73BD53;
+  font-weight: 600; }
+
+/* Selection color */
+/* line 31, ../scss/base/_base.scss */
+::-moz-selection {
+  /* Code for Firefox */
+  color: #10D88A;
+  background: #73BD53; }
+
+/* line 36, ../scss/base/_base.scss */
+::selection {
+  color: #4A4A4A;
+  background: #10D88A; }
+
+/* line 41, ../scss/base/_base.scss */
+a {
+  text-decoration: none;
+  color: #73BD53; }
+
+/* line 46, ../scss/base/_base.scss */
+.wrapper {
+  padding: 30px 10px;
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto; }
+
+/* line 53, ../scss/base/_base.scss */
+.base--title {
+  color: #73BD53;
+  font-size: 48px;
+  font-size: 3rem;
+  border-bottom: 1px solid #73BD53;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  overflow: hidden; }
+
+/* line 63, ../scss/base/_base.scss */
+.base--search {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  font-size: 1.25rem;
+  padding: 10px 0px;
+  padding-left: 40px;
+  background: url(../img/search.svg) left center no-repeat;
+  outline: 0;
+  color: rgba(51, 61, 70, 0.9);
+  font-family: "Avenir", sans-serif; }
+
+/* line 76, ../scss/base/_base.scss */
+::-webkit-input-placeholder {
+  font-style: italic; }
+
+/* line 79, ../scss/base/_base.scss */
+:-moz-placeholder {
+  font-style: italic; }
+
+/* line 82, ../scss/base/_base.scss */
+::-moz-placeholder {
+  font-style: italic; }
+
+/* line 85, ../scss/base/_base.scss */
+:-ms-input-placeholder {
+  font-style: italic; }
+
+/* line 89, ../scss/base/_base.scss */
+button {
+  cursor: pointer;
+  outline: 0; }
+
+/* line 1, ../scss/base/_button.scss */
+[class*='button--'] {
+  color: #10D88A;
+  font-size: 14px;
+  margin: .5rem 0;
+  cursor: pointer;
+  font-family: 'Avenir', sans-serif;
+  font-weight: 500;
+  border-radius: 0; }
+  /* line 10, ../scss/base/_button.scss */
+  [class*='button--']:hover, [class*='button--'].selected {
+    background-color: #14ee99; }
+  /* line 13, ../scss/base/_button.scss */
+  [class*='button--'].full {
+    width: 100%;
+    margin-top: 0; }
+
+/* line 48, ../scss/base/_button.scss */
+.button--base {
+  border-color: #5ba03d;
+  color: #73BD53; }
+  /* line 51, ../scss/base/_button.scss */
+  .button--base:hover, .button--base.selected, .button--base.disable, .button--base.solid {
+    background-color: #73BD53;
+    color: white; }
+  /* line 55, ../scss/base/_button.scss */
+  .button--base.disable, .button--base[disabled=disabled], .button--base:disabled {
+    font-size: 0;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    cursor: default; }
+    /* line 59, ../scss/base/_button.scss */
+    .button--base.disable:before, .button--base[disabled=disabled]:before, .button--base:disabled:before {
+      font-size: 1.3rem;
+      content: 'Loading...'; }
+
+/* line 48, ../scss/base/_button.scss */
+.button--green {
+  border-color: #0ca96c;
+  color: #10D88A; }
+  /* line 51, ../scss/base/_button.scss */
+  .button--green:hover, .button--green.selected, .button--green.disable, .button--green.solid {
+    background-color: #10D88A;
+    color: white; }
+  /* line 55, ../scss/base/_button.scss */
+  .button--green.disable, .button--green[disabled=disabled], .button--green:disabled {
+    font-size: 0;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    cursor: default; }
+    /* line 59, ../scss/base/_button.scss */
+    .button--green.disable:before, .button--green[disabled=disabled]:before, .button--green:disabled:before {
+      font-size: 1.3rem;
+      content: 'Loading...'; }
+
+/* line 48, ../scss/base/_button.scss */
+.button--orange {
+  border-color: #bc7f00;
+  color: #EFA200; }
+  /* line 51, ../scss/base/_button.scss */
+  .button--orange:hover, .button--orange.selected, .button--orange.disable, .button--orange.solid {
+    background-color: #EFA200;
+    color: white; }
+  /* line 55, ../scss/base/_button.scss */
+  .button--orange.disable, .button--orange[disabled=disabled], .button--orange:disabled {
+    font-size: 0;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    cursor: default; }
+    /* line 59, ../scss/base/_button.scss */
+    .button--orange.disable:before, .button--orange[disabled=disabled]:before, .button--orange:disabled:before {
+      font-size: 1.3rem;
+      content: 'Loading...'; }
+
+/* line 48, ../scss/base/_button.scss */
+.button--blue {
+  border-color: #00a5b7;
+  color: #00D3EA; }
+  /* line 51, ../scss/base/_button.scss */
+  .button--blue:hover, .button--blue.selected, .button--blue.disable, .button--blue.solid {
+    background-color: #00D3EA;
+    color: white; }
+  /* line 55, ../scss/base/_button.scss */
+  .button--blue.disable, .button--blue[disabled=disabled], .button--blue:disabled {
+    font-size: 0;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    cursor: default; }
+    /* line 59, ../scss/base/_button.scss */
+    .button--blue.disable:before, .button--blue[disabled=disabled]:before, .button--blue:disabled:before {
+      font-size: 1.3rem;
+      content: 'Loading...'; }
+
+/* line 48, ../scss/base/_button.scss */
+.button--red {
+  border-color: #ed3147;
+  color: #F16071; }
+  /* line 51, ../scss/base/_button.scss */
+  .button--red:hover, .button--red.selected, .button--red.disable, .button--red.solid {
+    background-color: #F16071;
+    color: white; }
+  /* line 55, ../scss/base/_button.scss */
+  .button--red.disable, .button--red[disabled=disabled], .button--red:disabled {
+    font-size: 0;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    cursor: default; }
+    /* line 59, ../scss/base/_button.scss */
+    .button--red.disable:before, .button--red[disabled=disabled]:before, .button--red:disabled:before {
+      font-size: 1.3rem;
+      content: 'Loading...'; }
+
+/* line 48, ../scss/base/_button.scss */
+.button--black {
+  border-color: #313131;
+  color: #4A4A4A; }
+  /* line 51, ../scss/base/_button.scss */
+  .button--black:hover, .button--black.selected, .button--black.disable, .button--black.solid {
+    background-color: #4A4A4A;
+    color: white; }
+  /* line 55, ../scss/base/_button.scss */
+  .button--black.disable, .button--black[disabled=disabled], .button--black:disabled {
+    font-size: 0;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    cursor: default; }
+    /* line 59, ../scss/base/_button.scss */
+    .button--black.disable:before, .button--black[disabled=disabled]:before, .button--black:disabled:before {
+      font-size: 1.3rem;
+      content: 'Loading...'; }
+
+/* line 48, ../scss/base/_button.scss */
+.button--white {
+  border-color: #e6e6e6;
+  color: white; }
+  /* line 51, ../scss/base/_button.scss */
+  .button--white:hover, .button--white.selected, .button--white.disable, .button--white.solid {
+    background-color: white;
+    color: white; }
+  /* line 55, ../scss/base/_button.scss */
+  .button--white.disable, .button--white[disabled=disabled], .button--white:disabled {
+    font-size: 0;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    cursor: default; }
+    /* line 59, ../scss/base/_button.scss */
+    .button--white.disable:before, .button--white[disabled=disabled]:before, .button--white:disabled:before {
+      font-size: 1.3rem;
+      content: 'Loading...'; }
+
+/* line 48, ../scss/base/_button.scss */
+.button--mint {
+  border-color: #17a176;
+  color: #1ECD97; }
+  /* line 51, ../scss/base/_button.scss */
+  .button--mint:hover, .button--mint.selected, .button--mint.disable, .button--mint.solid {
+    background-color: #1ECD97;
+    color: white; }
+  /* line 55, ../scss/base/_button.scss */
+  .button--mint.disable, .button--mint[disabled=disabled], .button--mint:disabled {
+    font-size: 0;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    cursor: default; }
+    /* line 59, ../scss/base/_button.scss */
+    .button--mint.disable:before, .button--mint[disabled=disabled]:before, .button--mint:disabled:before {
+      font-size: 1.3rem;
+      content: 'Loading...'; }
+
+/* line 67, ../scss/base/_button.scss */
+.button--none {
+  border: 0;
+  color: #7F7E92; }
+  /* line 70, ../scss/base/_button.scss */
+  .button--none:hover {
+    color: rgba(51, 61, 70, 0.9);
+    background-color: transparent; }
+
+/*
+
+24/02/2015 | J. Henrotte
+_input.scss
+Input
+
+*/
+/* Change the placeholder color */
+/* line 11, ../scss/base/_input.scss */
+input {
+  background-color: #363848;
+  border: none;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-size: 1.125rem;
+  outline: 0;
+  color: #7F7E92;
+  padding: 0 10px;
+  font-family: 'Avenir', Arial, sans-serif;
+  font-weight: 500; }
+
+/* line 24, ../scss/base/_input.scss */
+::-webkit-input-placeholder {
+  color: #7F7E92; }
+
+/* line 28, ../scss/base/_input.scss */
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #7F7E92; }
+
+/* line 32, ../scss/base/_input.scss */
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #7F7E92; }
+
+/* line 36, ../scss/base/_input.scss */
+:-ms-input-placeholder {
+  color: #7F7E92; }
+
+/* When input is focus -> Hide the placeholder */
+/* line 41, ../scss/base/_input.scss */
+input:focus::-webkit-input-placeholder {
+  color: transparent; }
+
+/* line 44, ../scss/base/_input.scss */
+input:focus:-moz-placeholder {
+  color: transparent; }
+
+/* line 47, ../scss/base/_input.scss */
+input:focus::-moz-placeholder {
+  color: transparent; }
+
+/* line 50, ../scss/base/_input.scss */
+input:focus:-ms-input-placeholder {
+  color: transparent; }
+
+/*
+
+20/04/2015 | J. Henrotte
+_background.scss
+Variables for the the Sagaframework
+
+*/
+/* line 10, ../scss/base/_background.scss */
+body {
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed; }
+
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+Copyright (c) 2015 Daniel Eden
+*/
+/* line 7, ../scss/base/_animate.scss */
+.animated, .fadeInUp {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both; }
+
+/* line 14, ../scss/base/_animate.scss */
+.animated.infinite, .infinite.fadeInUp {
+  animation-iteration-count: infinite; }
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0px, 30%, 0px); }
+  100% {
+    opacity: 1;
+    transform: none;
+    visibility: visible; } }
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0px, 30%, 0px); }
+  100% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+    visibility: visible; } }
+/* line 44, ../scss/base/_animate.scss */
+.fadeInUp {
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp; }
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    visibility: visible; } }
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    visibility: visible; } }
+/* line 72, ../scss/base/_animate.scss */
+.fade {
+  animation-name: fade;
+  -webkit-animation-name: fade;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards; }
+
+/*
+
+20/04/2015 | J. Henrotte
+_dev.scss
+Dev mode for the open know project
+SHOULD REMOVE FOR PRODUCTION
+
+*/
+/* line 1, ../scss/modules/_header.scss */
+.header {
+  border-bottom: 1px solid #e1e1e1;
+  overflow: hidden;
+  height: 50px;
+  padding: 0 10px; }
+  /* line 7, ../scss/modules/_header.scss */
+  .header--title--logo {
+    float: left;
+    margin-right: 2rem;
+    margin-top: 8px; }
+  /* line 12, ../scss/modules/_header.scss */
+  .header--title--text {
+    display: inline-block;
+    position: relative;
+    font-size: 1rem;
+    line-height: 46px; }
+    /* line 17, ../scss/modules/_header.scss */
+    .header--title--text:before {
+      content: "";
+      height: 20px;
+      width: 1px;
+      background-color: #ccc;
+      position: absolute;
+      left: -1rem;
+      top: 15px;
+      display: inline-block; }

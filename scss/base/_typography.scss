@@ -1,0 +1,80 @@
+/*
+
+17/02/2015 | J. Henrotte
+_typography.scss
+Typography for the Sagaframework
+
+*/
+
+body{
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-family: $base-family;
+	font-size: 62.5%;
+	font-weight: $base-family-regular;
+	line-height: 1.5;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: $title-family;
+	color: $title-color;
+	line-height: 1.2;
+}
+
+p{
+	font-family: $base-family;
+	font-weight: $base-family-regular;
+	color: $text-color;
+}
+
+em{
+	color: $green-color;
+}
+
+%big-title{
+	font-size: 3.6rem;
+}
+
+%medium-title{
+	font-size: 	2.4rem;
+}
+
+%normal-title{
+	font-size: 2.0rem;
+}
+
+%small-title{
+	font-size: 1.6rem;
+}
+
+%xsmall-title{
+	font-size: 1.2rem;
+}
+
+%big-paragraph{
+	font-size: 2.4rem;
+}
+
+%medium-paragraph{
+	font-size: 1.6rem;
+}
+
+%small-paragraph{
+	font-size: 1.2rem;
+}
+
+$color-choice: (
+  'green': $green-color,
+  'red': $red-color
+);
+
+@each $name, $color in $color-choice {
+	.color--#{$name}{
+		color: #{$color} !important;
+		a{
+			text-decoration: none;
+			font-style: italic;
+		}
+	}
+}

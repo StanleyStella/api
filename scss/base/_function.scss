@@ -1,0 +1,21 @@
+/*
+
+17/02/2015 | J. Henrotte
+_functions.scss
+Functions for the Sagaframework
+
+*/
+
+
+/*
+	
+	Function to calculate font-size in REM
+	Usage :
+		font-size: calculateRem(value);
+
+*/
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}

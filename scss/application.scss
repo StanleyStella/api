@@ -1,0 +1,32 @@
+/*
+
+24/08/2015 | J. Henrotte
+application.scss
+Importation of all scss files
+	-> Output css/application.css
+
+*/
+
+@import "compass";
+@import "compass/reset";
+
+// Base
+@import "base/vars";
+@import "base/placeholder";
+@import "base/mixins";
+@import "base/fonts";
+@import "base/fontIcons";
+@import "base/typography";
+@import "base/base";
+@import "base/button";
+@import "base/input";
+@import "base/background";
+@import "base/animate";
+
+
+// Dev
+@import "dev";
+
+// Modules
+
+@import "modules/header";

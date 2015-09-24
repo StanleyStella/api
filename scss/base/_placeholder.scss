@@ -1,0 +1,77 @@
+/*
+
+17/02/2015 | J. Henrotte
+_placeholder.scss
+Placeholders for the Sagaframework
+
+*/
+
+%clearfix{
+	&:before, 
+	&:after {
+		content: ''; 
+		display: table; 
+	}
+
+	&:after {
+		clear: both; 
+	}
+}
+
+%full--size{
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+%animateFast{
+	@include transition-property(all);
+	@include transition-duration(.1s);
+}
+
+%btntag{
+	@extend %animateFast;
+	@include border-radius(3px);
+	background-color: transparent;
+	border: 1px solid $black-color;
+	color: $black-color;
+	display: inline-block;
+	font-size: 1.4rem;
+	font-weight: 100;
+	outline: 0;
+	padding: .4rem 1.2rem;
+	text-align: center;
+	text-decoration: none;
+	&:hover{
+		background-color: $black-color;
+		color: white;
+	}
+}
+
+%base--block{
+	background: $bloc-color;
+	box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.20);
+}
+
+%flex{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content : space-between;
+	align-items: flex-start;
+	align-content: flex-start;
+}
+
+%invisible{
+	visibility:hidden;
+	opacity:0;
+	transition:visibility 0s linear 0.2s,opacity 0.2s linear;
+}
+
+%visible{
+	visibility:visible;
+	opacity:1;
+	transition-delay:0s;
+}
