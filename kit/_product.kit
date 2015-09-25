@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Stanley & Stella - Api</title>
-
-	<link rel="stylesheet" href="css/application.css">
-
-</head>
-<body>
-	<header class="header">
-	<h1 class="header--title">
-		<img src="img/logo.png" alt="Stanley & Stella's logo" width="100px" class="header--title--logo">
-		<span class="header--title--text">Api developer guide</span>
-	</h1>
-</header>	<nav class="navigation">
-	<ul class="navigation--list">
-		<li class="navigation--list--item">
-			<h2 class="navigation--list--item--title">Products</h2>
-		</li>
-		<li class="navigation--list--item"><a href="#product">Product</a></li>
-		<li class="navigation--list--item"><a href="#color">Colors</a></li>
-	</ul>
-</nav>	<main class="main" role="main">
-	<section id="product" class="main--container">
+<section id="product" class="main--container">
 	<section class="main--container--left">
 		<h2 class="main--container--left--title">Products</h2>
 		<p class="main--container--left--paragraph">Get informations products.</p>
@@ -243,47 +219,4 @@
 }
 </code></pre>
 	</section>
-</section>	<section id="color" class="main--container">
-	<section class="main--container--left">
-		<h2 class="main--container--left--title">Colors</h2>
-		<p class="main--container--left--paragraph">Get informations about colors.</p>
-		<h3 class="main--container--left--subtitle">Color object</h3>
-		<ul class="main--container--left--list">
-			<h4 class="main--container--left--list--title">Attributes</h4>
-			<li class="main--container--left--list--item">
-				<div class="main--container--left--list--item--attribut">
-					<p>id</p>
-					<code>string</code>
-				</div>
-				<div class="main--container--left--list--item--description">
-					<p>ID of the color. Created with letter C + code.</p>
-				</div>
-			</li>
-			<li class="main--container--left--list--item">
-				<div class="main--container--left--list--item--attribut">
-					<p>name</p>
-					<code>string</code>
-				</div>
-				<div class="main--container--left--list--item--description">
-					<p>Name of the color.</p>
-				</div>
-			</li>
-		</ul>
-	</section>
-	<section class="main--container--right">
-		<h3 class="main--container--right--title">Example response</h3>
-		<pre><code class="json">
-{
-"color": {
-	"id" : "C5511",
-	"name" : "Mid Washed Indigo",
-	}
-}
-</code></pre>
-	</section>
-</section></main>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="js/highlight.pack.js"></script>
-<script src="js/main.js"></script>	
-</body>
-</html>
+</section>

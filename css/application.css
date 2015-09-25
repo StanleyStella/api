@@ -7,7 +7,7 @@ Importation of all scss files
 
 */
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,400italic,300italic,600,600italic);
-/* line 5, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,38 +28,38 @@ time, mark, audio, video {
   font-size: 100%;
   vertical-align: baseline; }
 
-/* line 22, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1; }
 
-/* line 24, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none; }
 
-/* line 26, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 28, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle; }
 
-/* line 30, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none; }
-  /* line 103, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+  /* line 103, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
   q:before, q:after, blockquote:before, blockquote:after {
     content: "";
     content: none; }
 
-/* line 32, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none; }
 
-/* line 116, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
 
@@ -77,6 +77,14 @@ _placeholder.scss
 Placeholders for the Sagaframework
 
 */
+/* line 10, ../scss/base/_placeholder.scss */
+.main--container--left--list--item:before, .main--container--left--list--item:after {
+  content: '';
+  display: table; }
+/* line 16, ../scss/base/_placeholder.scss */
+.main--container--left--list--item:after {
+  clear: both; }
+
 /* line 29, ../scss/base/_placeholder.scss */
 [class*='button--'] {
   -moz-transition-property: all;
@@ -254,7 +262,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
-  color: #7F7E92; }
+  color: #828282; }
 
 /* line 31, ../scss/base/_typography.scss */
 em {
@@ -371,6 +379,10 @@ a {
 button {
   cursor: pointer;
   outline: 0; }
+
+/* line 94, ../scss/base/_base.scss */
+code {
+  font-family: "Monaco", monospace; }
 
 /* line 1, ../scss/base/_button.scss */
 [class*='button--'] {
@@ -544,7 +556,7 @@ button {
 /* line 67, ../scss/base/_button.scss */
 .button--none {
   border: 0;
-  color: #7F7E92; }
+  color: #828282; }
   /* line 70, ../scss/base/_button.scss */
   .button--none:hover {
     color: rgba(51, 61, 70, 0.9);
@@ -567,7 +579,7 @@ input {
   font-size: 18px;
   font-size: 1.125rem;
   outline: 0;
-  color: #7F7E92;
+  color: #828282;
   padding: 0 10px;
   font-family: 'Avenir', Arial, sans-serif;
   font-weight: 500; }
@@ -692,19 +704,22 @@ SHOULD REMOVE FOR PRODUCTION
   border-bottom: 1px solid #e1e1e1;
   overflow: hidden;
   height: 50px;
-  padding: 0 10px; }
-  /* line 7, ../scss/modules/_header.scss */
+  padding: 0 10px;
+  background: white;
+  position: relative;
+  z-index: 10; }
+  /* line 10, ../scss/modules/_header.scss */
   .header--title--logo {
     float: left;
     margin-right: 2rem;
     margin-top: 8px; }
-  /* line 12, ../scss/modules/_header.scss */
+  /* line 15, ../scss/modules/_header.scss */
   .header--title--text {
     display: inline-block;
     position: relative;
     font-size: 1rem;
     line-height: 46px; }
-    /* line 17, ../scss/modules/_header.scss */
+    /* line 20, ../scss/modules/_header.scss */
     .header--title--text:before {
       content: "";
       height: 20px;
@@ -714,3 +729,304 @@ SHOULD REMOVE FOR PRODUCTION
       left: -1rem;
       top: 15px;
       display: inline-block; }
+
+/* line 1, ../scss/modules/_navigation.scss */
+.navigation {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 200px;
+  background: #f8fafc;
+  border-right: 1px solid #e6edf4;
+  bottom: 0;
+  padding: 20px;
+  padding-top: 70px;
+  overflow: auto; }
+  /* line 15, ../scss/modules/_navigation.scss */
+  .navigation--list--item--title {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #6994bf; }
+  /* line 20, ../scss/modules/_navigation.scss */
+  .navigation--list--item a {
+    color: #828282;
+    font-size: 14px;
+    font-size: 0.875rem; }
+  /* line 25, ../scss/modules/_navigation.scss */
+  .navigation--list--item.active a {
+    color: #73BD53; }
+
+/* line 1, ../scss/modules/_main.scss */
+.main {
+  padding-left: 200px; }
+  /* line 3, ../scss/modules/_main.scss */
+  .main--container {
+    display: table;
+    width: 100%;
+    position: relative; }
+    /* line 7, ../scss/modules/_main.scss */
+    .main--container:after {
+      content: "";
+      width: 50%;
+      height: 1px;
+      position: absolute;
+      bottom: 0px;
+      border-bottom: 1px solid #dcefd4;
+      left: 0; }
+    /* line 16, ../scss/modules/_main.scss */
+    .main--container--left, .main--container--right {
+      width: 50%;
+      padding: 20px 30px;
+      display: table-cell; }
+    /* line 22, ../scss/modules/_main.scss */
+    .main--container--right {
+      background: #23241f;
+      position: relative; }
+      /* line 25, ../scss/modules/_main.scss */
+      .main--container--right:after {
+        content: '';
+        clear: both;
+        display: block; }
+    /* line 35, ../scss/modules/_main.scss */
+    .main--container--left--title, .main--container--left--subtitle {
+      font-size: 30px;
+      font-size: 1.875rem;
+      color: black;
+      margin-bottom: 1rem;
+      color: #2F343C;
+      font-weight: 500; }
+    /* line 43, ../scss/modules/_main.scss */
+    .main--container--left--subtitle {
+      font-size: 24px;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      margin-bottom: .5rem;
+      font-weight: 300; }
+    /* line 49, ../scss/modules/_main.scss */
+    .main--container--left--paragraph {
+      font-size: 15px;
+      font-size: 0.9375rem;
+      font-weight: 400;
+      color: #9c9c9c;
+      line-height: 1.6; }
+    /* line 57, ../scss/modules/_main.scss */
+    .main--container--left--list--title {
+      font-size: 14px;
+      font-size: 0.875rem;
+      margin-bottom: 1rem; }
+    /* line 61, ../scss/modules/_main.scss */
+    .main--container--left--list--item {
+      widows: 100%;
+      border-top: 1px solid #eaf4f8;
+      clear: both;
+      padding: 20px 0; }
+      /* line 67, ../scss/modules/_main.scss */
+      .main--container--left--list--item--attribut, .main--container--left--list--item--description {
+        width: 40%;
+        float: left;
+        font-size: 14px;
+        font-size: 0.875rem; }
+      /* line 73, ../scss/modules/_main.scss */
+      .main--container--left--list--item--attribut {
+        text-align: right;
+        padding-right: 15px; }
+        /* line 76, ../scss/modules/_main.scss */
+        .main--container--left--list--item--attribut p {
+          margin-bottom: .45rem;
+          font-weight: 600;
+          color: black; }
+        /* line 81, ../scss/modules/_main.scss */
+        .main--container--left--list--item--attribut code {
+          padding: 4px 8px;
+          font-size: 13px;
+          background: #eaf4f8;
+          color: #636161;
+          -webkit-border-radius: 3px;
+          border-radius: 3px;
+          -webkit-background-clip: padding-box;
+          -moz-background-clip: padding;
+          background-clip: padding-box; }
+      /* line 89, ../scss/modules/_main.scss */
+      .main--container--left--list--item--description {
+        width: 60%; }
+    /* line 98, ../scss/modules/_main.scss */
+    .main--container--right--title {
+      color: white;
+      font-size: 14px;
+      font-size: 0.875rem;
+      text-transform: uppercase; }
+
+/* line 3, ../scss/modules/_code.scss */
+.code--link span {
+  position: relative; }
+  /* line 5, ../scss/modules/_code.scss */
+  .code--link span:after {
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    content: "";
+    background: #f92672;
+    left: 0; }
+
+/* line 18, ../scss/modules/_code.scss */
+pre {
+  white-space: pre-wrap; }
+
+/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+/* line 7, ../scss/vendors/_hightlight.scss */
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+  -webkit-text-size-adjust: none;
+  font-size: 12px;
+  font-family: "Monaco", monospace;
+  font-weight: 600; }
+
+/* line 18, ../scss/vendors/_hightlight.scss */
+.hljs,
+.hljs-tag,
+.css .hljs-rule,
+.css .hljs-value,
+.aspectj .hljs-function,
+.css .hljs-function
+.hljs-preprocessor,
+.hljs-pragma {
+  color: #f8f8f2; }
+
+/* line 29, ../scss/vendors/_hightlight.scss */
+.hljs-strongemphasis,
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2; }
+
+/* line 35, ../scss/vendors/_hightlight.scss */
+.hljs-bullet,
+.hljs-blockquote,
+.hljs-horizontal_rule,
+.hljs-number,
+.hljs-regexp,
+.alias .hljs-keyword,
+.hljs-literal,
+.hljs-hexcolor {
+  color: #ae81ff; }
+
+/* line 46, ../scss/vendors/_hightlight.scss */
+.hljs-tag .hljs-value,
+.hljs-code,
+.hljs-title,
+.css .hljs-class,
+.hljs-class .hljs-title:last-child {
+  color: #a6e22e; }
+
+/* line 54, ../scss/vendors/_hightlight.scss */
+.hljs-link_url {
+  font-size: 80%; }
+
+/* line 58, ../scss/vendors/_hightlight.scss */
+.hljs-strong,
+.hljs-strongemphasis {
+  font-weight: bold; }
+
+/* line 63, ../scss/vendors/_hightlight.scss */
+.hljs-emphasis,
+.hljs-strongemphasis,
+.hljs-class .hljs-title:last-child,
+.hljs-typename {
+  font-style: italic; }
+
+/* line 70, ../scss/vendors/_hightlight.scss */
+.hljs-keyword,
+.ruby .hljs-class .hljs-keyword:first-child,
+.ruby .hljs-function .hljs-keyword,
+.hljs-function,
+.hljs-change,
+.hljs-winutils,
+.hljs-flow,
+.nginx .hljs-title,
+.tex .hljs-special,
+.hljs-header,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-symbol .hljs-string,
+.hljs-tag .hljs-title,
+.hljs-value,
+.alias .hljs-keyword:first-child,
+.css .hljs-tag,
+.css .unit,
+.css .hljs-important {
+  color: #f92672; }
+
+/* line 92, ../scss/vendors/_hightlight.scss */
+.hljs-function .hljs-keyword,
+.hljs-class .hljs-keyword:first-child,
+.hljs-aspect .hljs-keyword:first-child,
+.hljs-constant,
+.hljs-typename,
+.hljs-name,
+.css .hljs-attribute {
+  color: #66d9ef; }
+
+/* line 102, ../scss/vendors/_hightlight.scss */
+.hljs-variable,
+.hljs-params,
+.hljs-class .hljs-title,
+.hljs-aspect .hljs-title {
+  color: #f8f8f2; }
+
+/* line 109, ../scss/vendors/_hightlight.scss */
+.hljs-string,
+.css .hljs-id,
+.hljs-subst,
+.hljs-type,
+.ruby .hljs-class .hljs-parent,
+.hljs-built_in,
+.django .hljs-template_tag,
+.django .hljs-variable,
+.smalltalk .hljs-class,
+.django .hljs-filter .hljs-argument,
+.smalltalk .hljs-localvars,
+.smalltalk .hljs-array,
+.hljs-attr_selector,
+.hljs-pseudo,
+.hljs-addition,
+.hljs-stream,
+.hljs-envvar,
+.apache .hljs-tag,
+.apache .hljs-cbracket,
+.tex .hljs-command,
+.hljs-prompt,
+.hljs-link_label,
+.hljs-link_url {
+  color: #e6db74; }
+
+/* line 135, ../scss/vendors/_hightlight.scss */
+.hljs-comment,
+.hljs-annotation,
+.hljs-decorator,
+.hljs-pi,
+.hljs-doctype,
+.hljs-deletion,
+.hljs-shebang,
+.apache .hljs-sqbracket,
+.tex .hljs-formula {
+  color: #75715e; }
+
+/* line 147, ../scss/vendors/_hightlight.scss */
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata,
+.xml .php,
+.php .xml {
+  opacity: 0.5; }

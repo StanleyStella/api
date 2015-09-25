@@ -1,0 +1,20 @@
+.code{
+	&--link{
+		span{
+			position: relative;
+			&:after{
+				position: absolute;
+				bottom: -1px;
+				width: 100%;
+				height: 1px;
+				content: "";
+				background: #f92672;
+				left: 0;
+			}
+		}
+	}
+}
+
+pre{
+  white-space: pre-wrap;
+}
