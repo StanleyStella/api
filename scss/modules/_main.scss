@@ -62,11 +62,11 @@
 					margin-bottom: 1rem;
 				}
 				&--item{
-					widows: 100%;
 					border-top: 1px solid $border-attr;
 					@extend %clearfix;
 					clear: both;
 					padding: 20px 0;
+					list-style: none;
 					&--attribut,
 					&--description{
 						width: 40%;

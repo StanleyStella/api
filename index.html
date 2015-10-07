@@ -11,7 +11,7 @@
 	<header class="header">
 	<h1 class="header--title">
 		<img src="img/logo.png" alt="Stanley & Stella's logo" width="100px" class="header--title--logo">
-		<span class="header--title--text">Api developer guide</span>
+		<span class="header--title--text">Api developer guide (in progress)</span>
 	</h1>
 </header>	<nav class="navigation">
 	<ul class="navigation--list">
@@ -27,6 +27,10 @@
 			<h2 class="navigation--list--item--title">Users</h2>
 		</li>
 		<li class="navigation--list--item"><a href="#user">User</a></li>
+		<li class="navigation--list--item">
+			<h2 class="navigation--list--item--title">Shops</h2>
+		</li>
+		<li class="navigation--list--item"><a href="#shops">Shop</a></li>
 	</ul>
 </nav>	<main class="main" role="main">
 	<section id="product" class="main--container">
@@ -735,6 +739,111 @@
 	"credit_card" : {
 		"count" : 1,
 		"url" : "https://api.stripe.com/v1/customers/{CUSTOMER_ID}/sources?object=card"
+	}
+}
+</code></pre>
+	</section>
+</section>	<section id="shops" class="main--container">
+	<section class="main--container--left">
+		<h2 class="main--container--left--title">Shop</h2>
+		<p class="main--container--left--paragraph">Get informations about shop.</p>
+		<h3 class="main--container--left--subtitle">Shop object</h3>
+		<ul class="main--container--left--list">
+			<h4 class="main--container--left--list--title">Attributes</h4>
+			<li class="main--container--left--list--item">
+				<div class="main--container--left--list--item--attribut">
+					<p>id</p>
+					<code>string</code>
+				</div>
+				<div class="main--container--left--list--item--description">
+					<p>ID of the shop. Created with SP + unique serie of number.</p>
+				</div>
+			</li>
+			<li class="main--container--left--list--item">
+				<div class="main--container--left--list--item--attribut">
+					<p>name</p>
+					<code>string</code>
+				</div>
+				<div class="main--container--left--list--item--description">
+					<p>Name of the Shop.</p>
+				</div>
+			</li>
+		</ul>
+		<li class="main--container--left--list--item">
+			<div class="main--container--left--list--item--attribut">
+				<p>adress</p>
+				<code>string</code>
+			</div>
+			<div class="main--container--left--list--item--description">
+				<p>Street adress of the shop.</p>
+			</div>
+		</li>
+		<li class="main--container--left--list--item">
+			<div class="main--container--left--list--item--attribut">
+				<p>zip_code</p>
+				<code>number</code>
+			</div>
+			<div class="main--container--left--list--item--description">
+				<p>Zip code of the Shop.</p>
+			</div>
+		</li>
+		<li class="main--container--left--list--item">
+			<div class="main--container--left--list--item--attribut">
+				<p>city</p>
+				<code>string</code>
+			</div>
+			<div class="main--container--left--list--item--description">
+				<p>City of the shop.</p>
+			</div>
+		</li>
+		<li class="main--container--left--list--item">
+			<div class="main--container--left--list--item--attribut">
+				<p>country</p>
+				<code>string</code>
+			</div>
+			<div class="main--container--left--list--item--description">
+				<p>Country of the Shop.</p>
+			</div>
+		</li>
+		<li class="main--container--left--list--item">
+			<div class="main--container--left--list--item--attribut">
+				<p>iso_code</p>
+				<code>string</code>
+			</div>
+			<div class="main--container--left--list--item--description">
+				<p>Iso code of the country (2 letters).</p>
+			</div>
+		</li>
+		<li class="main--container--left--list--item">
+			<div class="main--container--left--list--item--attribut">
+				<p>phone_numbers</p>
+				<code>array</code>
+			</div>
+			<div class="main--container--left--list--item--description">
+				<p>Array of phone numbers for the shop</p>
+			</div>
+		</li>
+	</section>
+	<section class="main--container--right">
+		<h3 class="main--container--right--title">Example response</h3>
+		<pre><code class="json">
+{
+"shop": {
+	"id" : "SP0001",
+	"name" : "Stanley & Stella Anvers",
+	"adress" : "Bld Louis Schmidt 3",
+	"zip_code" : "1040",
+	"city" : "Brussels",
+	"country" : "Belgium",
+	"iso_code" : "BE",
+	"phone_numbers" : [{
+	        "number": "+32 2 663 33 00",
+	        "role": "Customer care"
+	    },
+	    {
+	        "number": "+32 2 663 33 03",
+	        "role": "Manager"
+	    }]
 	}
 }
 </code></pre>

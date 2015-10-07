@@ -172,6 +172,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/kit\/_shops.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/kit\/_shops.kit",
+		"outputAbbreviatedPath": "\/kit\/_shops.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/kit\/_similarproduct.kit": {
 		"fileType": 2048,
 		"ignore": 1,
